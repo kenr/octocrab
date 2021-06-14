@@ -320,6 +320,7 @@ impl OctocrabBuilder {
         let client = reqwest::Client::builder()
             .user_agent("octocrab")
             .default_headers(hmap)
+            .connection_verbose(true)
             .build()
             .context(crate::error::Http)?;
 
